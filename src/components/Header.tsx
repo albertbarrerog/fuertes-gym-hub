@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
+import logoHeader from '@/assets/logo-header.png';
+import logoHeaderDefault from '@/assets/logo-header-default.png';
 
 const navLinks = [
   { name: 'Inicio', href: '#inicio' },
@@ -34,11 +36,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2">
-            <span className={`text-2xl font-black tracking-tight transition-colors duration-300 ${
-              isScrolled ? 'text-primary' : 'text-primary-foreground'
-            }`}>
-              FUERTES
-            </span>
+            <img
+              src={isScrolled ? logoHeader : logoHeaderDefault}
+              alt="FUERTES"
+              className="h-12 w-auto"
+              loading="eager"
+            />
           </a>
 
           {/* Desktop Navigation */}

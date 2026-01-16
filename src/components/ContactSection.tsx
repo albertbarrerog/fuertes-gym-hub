@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Car, Accessibility } from 'lucide-react';
+import { MapPin, Phone, Clock } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -14,7 +14,7 @@ const ContactSection = () => {
               Visítanos en Santa Rosa de Cabal
             </h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              Estamos ubicados en el centro de la ciudad, con fácil acceso y parqueadero disponible.
+              Estamos ubicados en el corazón de la ciudad, con fácil acceso y parqueadero disponible para tu comodidad.
             </p>
 
             <div className="mt-8 space-y-6">
@@ -56,25 +56,13 @@ const ContactSection = () => {
                   <p className="text-muted-foreground">Lunes a Viernes: 5:00 AM – 8:00 PM</p>
                 </div>
               </div>
-
-              {/* Facilities */}
-              <div className="flex flex-wrap gap-4 pt-4 border-t border-border">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Car className="w-5 h-5 text-secondary" />
-                  <span>Parqueadero</span>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Accessibility className="w-5 h-5 text-secondary" />
-                  <span>Acceso para discapacidad</span>
-                </div>
-              </div>
             </div>
           </div>
 
           {/* Map */}
-          <div className="relative h-[400px] lg:h-auto min-h-[400px] rounded-2xl overflow-hidden shadow-card">
+          <div className="relative h-[340px] lg:h-auto min-h-[340px] rounded-2xl overflow-hidden shadow-card">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789!2d-75.6200000!3d4.8700000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCalle%2012%20%238-05%2C%20Santa%20Rosa%20de%20Cabal%2C%20Risaralda!5e0!3m2!1ses!2sco!4v1234567890"
+              src="https://www.google.com/maps?q=4.866254,-75.615541&z=17&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

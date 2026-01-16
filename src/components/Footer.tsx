@@ -1,4 +1,5 @@
-import { MapPin, Phone, Clock, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Clock, Instagram } from 'lucide-react';
+import footerLogo from '@/assets/logo-texto-header-negativo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,14 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-black">FUERTES</h3>
+            <img
+              src={footerLogo}
+              alt="FUERTES"
+              className="h-10 w-auto"
+              loading="lazy"
+            />
             <p className="mt-4 text-primary-foreground/70 text-sm leading-relaxed">
-              Centro de Acondicionamiento Físico con más de 20 años transformando vidas a través del movimiento.
+              Centro de Acondicionamiento Físico donde tu bienestar está en manos de expertos, con programas ajustados a tus capacidades.
             </p>
           </div>
 
@@ -52,18 +58,13 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Síguenos</h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/fuertes.club/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </div>

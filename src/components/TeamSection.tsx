@@ -1,38 +1,37 @@
-import { Award, Star } from 'lucide-react';
+import { Award } from 'lucide-react';
+import elizabethImage from '@/assets/team/elizabeth-barrero.png';
+import carlosImage from '@/assets/team/carlos-segura.png';
+import marianaImage from '@/assets/team/mariana-sepulveda-molina.png';
 
 interface TeamMember {
   name: string;
   role: string;
   specialty: string;
-  experience: string;
+  image: string;
   certifications: string[];
-  achievement?: string;
 }
 
 const team: TeamMember[] = [
   {
     name: 'Elizabeth Barrero',
-    role: 'Entrenadora Deportiva',
+    role: 'Entrenador Deportivo',
     specialty: 'Especialista en levantamiento de pesas y alto rendimiento',
-    experience: '22 años de experiencia',
-    certifications: ['COI', 'Panam Sports', 'Ley 2210'],
-    achievement: 'Entrenadora Selección Colombia Sub-17 y Juvenil',
+    image: elizabethImage,
+    certifications: ['22 años de experiencia'],
   },
   {
     name: 'Carlos Segura',
     role: 'Entrenador Deportivo',
     specialty: 'Especialista en teoría y metodología del entrenamiento',
-    experience: '12 años de experiencia',
-    certifications: ['Profesional en Ciencias del Deporte'],
-    achievement: 'Enfoque en entrenamiento seguro y adaptado',
+    image: carlosImage,
+    certifications: ['Profesional en ciencias del deporte'],
   },
   {
-    name: 'Mariana Sepúlveda Molina',
+    name: 'Mariana Sepúlveda',
     role: 'Fisioterapeuta',
     specialty: 'Especialista en rehabilitación y lesiones osteomusculares',
-    experience: 'Atiende todas las edades',
-    certifications: ['Fisioterapia certificada'],
-    achievement: 'Enfoque integral en calidad de vida',
+    image: marianaImage,
+    certifications: ['Profesional en Fisioterapia'],
   },
 ];
 
@@ -58,45 +57,36 @@ const TeamSection = () => {
           {team.map((member, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-8 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1"
+              className="rounded-2xl p-8 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 bg-muted"
             >
-              {/* Avatar placeholder */}
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-6">
-                <span className="text-2xl font-bold text-primary-foreground">
-                  {member.name.split(' ').map(n => n[0]).join('')}
-                </span>
-              </div>
+              <div className="flex items-start justify-between gap-6">
+                <div className="min-w-0">
+                  <h3 className="text-xl font-bold text-card-foreground">{member.name}</h3>
+                  <p className="text-secondary font-semibold mt-1">{member.role}</p>
+                  <p className="mt-3 text-muted-foreground text-sm">
+                    {member.specialty}
+                  </p>
+                </div>
 
-              <h3 className="text-xl font-bold text-card-foreground">{member.name}</h3>
-              <p className="text-secondary font-semibold mt-1">{member.role}</p>
-              
-              <p className="mt-4 text-muted-foreground text-sm">
-                {member.specialty}
-              </p>
-              
-              <div className="mt-4 flex items-center gap-2 text-sm text-foreground">
-                <Star className="w-4 h-4 text-secondary" />
-                {member.experience}
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden ring-2 ring-secondary/30 flex-shrink-0">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
-
+              
               {/* Certifications */}
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="mt-2 space-y-1">
                 {member.certifications.map((cert, idx) => (
-                  <span
-                    key={idx}
-                    className="inline-flex items-center gap-1 px-3 py-1 bg-muted rounded-full text-xs font-medium text-muted-foreground"
-                  >
-                    <Award className="w-3 h-3" />
-                    {cert}
-                  </span>
+                  <div key={idx} className="flex items-center gap-2 text-muted-foreground text-sm">
+                    <Award className="w-4 h-4 text-secondary flex-shrink-0" />
+                    <span className="italic">{cert}</span>
+                  </div>
                 ))}
               </div>
-
-              {member.achievement && (
-                <p className="mt-4 text-sm text-secondary font-medium border-t border-border pt-4">
-                  {member.achievement}
-                </p>
-              )}
             </div>
           ))}
         </div>

@@ -1,9 +1,9 @@
 import { ArrowRight, Check } from 'lucide-react';
-import functionalImage from '@/assets/functional-training.jpg';
-import seniorImage from '@/assets/senior-fitness.jpg';
-import kidsImage from '@/assets/kids-sports.jpg';
-import psychomotorImage from '@/assets/kids-psychomotor.jpg';
-import physioImage from '@/assets/physiotherapy.jpg';
+import functionalImage from '@/assets/functional-training.png';
+import seniorImage from '@/assets/senior-fitness.png';
+import kidsImage from '@/assets/kids-sports.png';
+import psychomotorImage from '@/assets/kids-psychomotor.png';
+import physioImage from '@/assets/physiotherapy.png';
 
 const WHATSAPP_BASE = 'https://wa.me/573043442514?text=';
 
@@ -24,9 +24,8 @@ const services: Service[] = [
     image: functionalImage,
     benefits: [
       'Fuerza y resistencia',
-      'Coordinación y equilibrio',
-      'Movimientos adaptados',
       'Prevención de lesiones',
+      'Coordinación y equilibrio',
     ],
     whatsappMessage: 'Hola, me interesa el programa de Entrenamiento Funcional',
   },
@@ -37,8 +36,7 @@ const services: Service[] = [
     image: seniorImage,
     benefits: [
       'Fortalecimiento progresivo',
-      'Prevención de caídas',
-      'Mayor movilidad',
+      'Bienestar integral',
       'Entorno seguro y guiado',
     ],
     whatsappMessage: 'Hola, me interesa el programa Adulto VIP',
@@ -49,10 +47,9 @@ const services: Service[] = [
     audience: 'Niños y adolescentes (7-14)',
     image: kidsImage,
     benefits: [
-      'Habilidades deportivas',
       'Valores y disciplina',
       'Base para cualquier deporte',
-      'Desarrollo físico integral',
+      'Agilidad física',
     ],
     whatsappMessage: 'Hola, me interesa el programa de Iniciación Deportiva para mi hijo/a',
   },
@@ -62,10 +59,9 @@ const services: Service[] = [
     audience: 'Niños (4-6)',
     image: psychomotorImage,
     benefits: [
-      'Coordinación motriz',
       'Estimulación cognitiva',
       'Aprendizaje mediante el juego',
-      'Desarrollo socio-afectivo',
+      'Coordinación motriz',
     ],
     whatsappMessage: 'Hola, me interesa el programa de Desarrollo Psicomotor para mi hijo/a',
   },
@@ -76,9 +72,8 @@ const services: Service[] = [
     image: physioImage,
     benefits: [
       'Rehabilitación efectiva',
-      'Alivio de dolencias',
-      'Prevención de lesiones',
-      'Planes personalizados',
+      'Movilidad óptima',
+      'Alivio dolor',
     ],
     whatsappMessage: 'Hola, me interesa el servicio de Fisioterapia',
   },

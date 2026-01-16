@@ -1,7 +1,7 @@
 import { MessageCircle, Phone } from 'lucide-react';
-import ctaBackground from '@/assets/cta-background.jpg';
+import ctaBackground from '@/assets/cta-background.png';
 
-const WHATSAPP_LINK = 'https://wa.me/573043442514?text=Hola,%20quiero%20agendar%20una%20clase%20de%20prueba';
+const WHATSAPP_LINK = 'https://wa.me/573043442514?text=Hola,%20quiero%20agendar%20una%20clase%20de%20cortesía';
 
 const CTASection = () => {
   return (
@@ -20,8 +20,8 @@ const CTASection = () => {
       {/* Content */}
       <div className="relative z-10 container-fuertes text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-primary-foreground leading-tight">
-          Empieza hoy a moverte{' '}
-          <span className="text-secondary">más fuerte</span>
+          Comienza tu proceso con{' '}
+          <span className="text-secondary">profesionales</span>
         </h2>
         <p className="mt-6 text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto">
           Tu primera clase es de cortesía. Descubre cómo podemos ayudarte a alcanzar tus metas de salud y bienestar.
@@ -35,7 +35,7 @@ const CTASection = () => {
             className="btn-primary text-lg px-8 py-4"
           >
             <MessageCircle className="w-5 h-5 mr-2" />
-            Agenda tu clase de prueba
+            Agenda tu clase de cortesía
           </a>
           <a
             href="tel:+573043442514"

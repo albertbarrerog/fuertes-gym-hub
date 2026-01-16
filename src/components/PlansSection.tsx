@@ -1,11 +1,12 @@
 import { Check, Clock, Users, MessageCircle } from 'lucide-react';
 
 const WHATSAPP_LINK = 'https://wa.me/573043442514?text=Hola,%20quiero%20información%20sobre%20los%20planes%20y%20precios';
+const WHATSAPP_COURTESY_LINK =
+  'https://wa.me/573043442514?text=Hola,%20quiero%20agendar%20mi%20clase%20de%20cortesia';
 
 const schedules = [
   { day: 'Lunes a Viernes', time: '5:00 AM – 8:00 PM' },
-  { day: 'Sábados', time: 'Por confirmar' },
-  { day: 'Domingos', time: 'Por confirmar' },
+  { day: 'Sábados', time: '7:00 AM - 11 AM' },
 ];
 
 const plans = [
@@ -26,13 +27,6 @@ const plans = [
   },
 ];
 
-const features = [
-  'Grupos máx. 10 personas',
-  'Atención semi-personalizada',
-  'Programas adaptados a tu nivel',
-  'Seguimiento de progreso',
-];
-
 const PlansSection = () => {
   return (
     <section id="planes" className="section-padding bg-primary">
@@ -46,6 +40,9 @@ const PlansSection = () => {
             <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-primary-foreground">
               Entrena cuando mejor te convenga
             </h2>
+            <p className="mt-4 text-primary-foreground/70 text-lg">
+              Sesiones guiadas de 1 hora para grupos de máximo 10 usuarios.
+            </p>
             
             <div className="mt-8 space-y-4">
               {schedules.map((schedule, index) => (
@@ -61,6 +58,16 @@ const PlansSection = () => {
                 </div>
               ))}
             </div>
+
+            <a
+              href={WHATSAPP_COURTESY_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 btn-primary inline-flex"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Agenda tu clase de cortesia
+            </a>
           </div>
 
           {/* Plans */}
@@ -97,16 +104,6 @@ const PlansSection = () => {
                       </span>
                     )}
                   </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Features */}
-            <div className="mt-8 grid grid-cols-2 gap-3">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-secondary flex-shrink-0" />
-                  <span className="text-sm text-primary-foreground/80">{feature}</span>
                 </div>
               ))}
             </div>
