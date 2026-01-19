@@ -1,10 +1,9 @@
-import { MessageCircle, ChevronDown, Users, Award, HeartPulse } from 'lucide-react';
+import { MessageCircle, ChevronDown, Award, HeartPulse } from 'lucide-react';
 import heroImage from '@/assets/hero-training.png';
 
 const WHATSAPP_LINK = 'https://wa.me/573043442514?text=Hola,%20quiero%20agendar%20una%20clase%20de%20cortesía';
 
 const features = [
-  { icon: Users, text: 'Máx. 10 personas por clase' },
   { icon: Award, text: 'Entrenadores certificados' },
   { icon: HeartPulse, text: 'Fisioterapia integral' },
 ];
