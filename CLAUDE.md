@@ -6,5 +6,5 @@
 > - `Dockerfile` con `node:20` para compilar y **`nginx:1.25` (2023) sirviendo el sitio**: pasar a `node:22` y a un `nginx` actual.
 > - Antes de invertir aquí: decidir si esta web vieja se sigue usando o se apaga (el producto del gym es `fomup/saas-gym-functional`).
 > Detalle: repo privado `albertbarrerog/seguridad-albert` (`HALLAZGOS.md`, `PLAN-EJECUCION.md`); antes, plan maestro en
-> `fomup/seguridad/PLAN-MAESTRO.md`. **Al terminar, anotarlo en `seguridad-albert/HALLAZGOS.md` y borrar o tachar este bloque.**
+> `seguridad-albert/fomup/PLAN-MAESTRO.md`. **Al terminar, anotarlo en `seguridad-albert/HALLAZGOS.md` y borrar o tachar este bloque.**
 
